@@ -2,6 +2,8 @@
 
 An API is a web-based standard for computers to communicate with one another. They are useful in data science as a way of retrieving remote data, or publishing data and making it available to others.
 
+Fork and clone this repository to build your own API using a VS Code Devcontainer - https://github.com/uvasds-systems/fastapi-devcontainer/ 
+
 ## Methods
 
 - **GET** - fetch or retrieve data
@@ -43,9 +45,10 @@ APIs typically expose data from another system, such as storage, a database, or 
 
 ### Pandas
 
-However, students familiar with Python will recognize that the Pandas library can query CSV files in much the same way as a database.
+However, students familiar with Python will recognize that the Pandas library can query CSV files in much the same way as a database. So we can use Pandas to "query" a flat text file
+as if it were a database by passing in our query and letting Pandas find that record for us. With a relational database, we would use SQL to perform this query.
 
-Consider the following example, which passes a row index into a function to retrieve that record.
+Consider the following example, which passes a row index into a function to retrieve that record using Pandas.
 
 [Sample Data](customers.csv) - fetch the 10k customer record CSV file.
 
