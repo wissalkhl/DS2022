@@ -47,7 +47,7 @@ However, students familiar with Python will recognize that the Pandas library ca
 
 Consider the following example, which passes a row index into a function to retrieve that record.
 
-[Sample Data](https://github.com/datablist/sample-csv-files) - fetch the 10k customer record CSV file.
+[Sample Data](customers.csv) - fetch the 10k customer record CSV file.
 
 ```
 import pandas as pd
