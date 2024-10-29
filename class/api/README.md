@@ -4,8 +4,8 @@ An API is a web-based standard for computers to communicate with one another. Th
 
 ## Methods
 
-- GET - fetch or retrieve data
-- POST - send or submit data
+- **GET** - fetch or retrieve data
+- **POST** - send or submit data
 
 ## Endpoints
 
@@ -41,6 +41,8 @@ Payloads are typically a collection of data in JSON format, though sometimes a p
 
 APIs typically expose data from another system, such as storage, a database, or another service.
 
+### Pandas
+
 However, students familiar with Python will recognize that the Pandas library can query CSV files in much the same way as a database.
 
 Consider the following example, which passes a row index into a function to retrieve that record.
@@ -61,3 +63,22 @@ get_customer_by_index(1372)
 ```
 {'Index': 1373, 'Customer Id': '3AD32Dab554fcaD', 'First Name': 'Kyle', 'Last Name': 'Jefferson', 'Company': 'Farley-Mcgrath', 'City': 'Lorettatown', 'Country': 'Australia', 'Phone 1': '435-303-9388x292', 'Phone 2': '(703)354-0004x2229', 'Email': 'natalie51@reid.com', 'Subscription Date': '2021-07-13', 'Website': 'http://cole-melton.com/'}
 ```
+
+### POSTing data
+
+It may also be helpful to see what you get when you POST data to a FastAPI. Consider this snippet of FastAPI code, which takes the JSON payload submitted in the body of the request and returns it back to the user:
+
+```
+from fastapi import Request, FastAPI
+
+api = FastAPI()
+
+@api.post("/get_body")
+async def get_body(request: Request):
+    return await request.json()
+```
+```
+curl -X 'POST' \
+  'http://127.0.0.1:8000/get_body' \
+  -H 'accept: application/json' \
+  -d '{"first_field": 2022, "second_field": "Systems I: Intro to Computing", "third_field":"SDS"}'
