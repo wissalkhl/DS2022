@@ -68,7 +68,7 @@ For purposes of inserting mock data, here are some suggestions:
 Add data to your new table. Here is a sample entry you can use:
 
 ```
-INSERT INTO `tracking` (`id`, `file`, `owner`, `updated`, `step`, `source`) VALUES (NULL, 'BkJrynaRf4gu.csv', 'mst3k', '2024-02-08', '4', 'NSF')
+INSERT INTO `tracking` (`id`, `file`, `owner`, `updated`, `step`, `source`) VALUES (NULL, 'BkJrynaRf4gu.csv', 'mst3k', '2024-02-08', '4', 'NSF');
 ```
 **Repeat this process and create at least 20 entries in your table.** Be sure to vary your `owner` field to use 3-4 different owners, a few different sources, and a few different dates.
 
@@ -239,6 +239,8 @@ Some notes:
 - Line 4 - a join of the secondary table, which will serve as a resource to populate the query.
 - Line 5 - finally, you must map the "relation", i.e. the column from one table that matches up with a value in the other table.
 
+Notice in your output that the `name` field is populated with a real name, not a user ID.
+
 ### Your Turn
 
 Now write a query that lists the `file`, `step`, and owner `name` for researchers who have NOT yet completed the training. Order the results by ascending order from the `updated` column.
@@ -247,4 +249,4 @@ Run the query to test or debug your results.
 
 ## Submit your work
 
-Submit your SQL query in the text field within Canvas.
+Save your query as a GitHub gist https://gist.github.com/ and submit the URL to your gist in the field within Canvas.
