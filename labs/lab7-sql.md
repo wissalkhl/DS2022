@@ -65,7 +65,7 @@ For purposes of inserting mock data, here are some suggestions:
 
 ## Insert data
 
-Using either the `mysql` CLI or the PhpMyAdmin user interface (click the INSERT tab), add data to your new table. Here is a sample entry you can use:
+Add data to your new table. Here is a sample entry you can use:
 
 ```
 INSERT INTO `tracking` (`id`, `file`, `owner`, `updated`, `step`, `source`) VALUES (NULL, 'BkJrynaRf4gu.csv', 'mst3k', '2024-02-08', '4', 'NSF')
