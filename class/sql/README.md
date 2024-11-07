@@ -8,14 +8,16 @@ Open a browser tab to https://demo.cloudbeaver.io/#/
 4. Select some rows from a table
 5. Limit the select with a WHERE clause, or a LIMIT.
 
-CREATE
+## CRUD Operations
+
+### `CREATE`
 ```
 create table nem2p_continents (
 	continent_id VARCHAR(5),
 	continent_name VARCHAR(30)
 );
 ```
-SELECT
+### `SELECT`
 ```
 SELECT * FROM nem2p_continents;
 SELECT COUNT(*) FROM nem2p_continents;
@@ -24,7 +26,7 @@ SELECT * FROM nem2p_continents WHERE id > 2 AND id < 4;
 SELECT * FROM customer LIMIT 10;
 ```
 
-INSERT
+### `INSERT`
 ```
 INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('NA', 'North America');
 INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('AS', 'Asia');
@@ -33,18 +35,22 @@ INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('AF', 'Afric
 INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('EU', 'Europe');
 INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('OC', 'Oceania');
 ```
-UPDATE
+### `UPDATE`
 ```
 UPDATE nem2p_continents SET continent_name = "Oceania and Beyond" WHERE continent_id = 'OC';
 ```
-DROP
+### `DROP`
 ```
 DELETE FROM nem2p_continents WHERE continent_id = 'EU';
 ```
 
-JOIN
+### `JOIN`
 ```
 SELECT nem2p.first_name, nem2p.last_name, nem2p_continents.continent_name
 FROM nem2p JOIN nem2p_continents 
   WHERE nem2p.continent = nem2p_continents.continent_id;
 ```
+
+## Work with Mock Data
+
+Generate mock data records from https://mockaroo.com/ and export as SQL. Be sure to include the "Create Table" option!
