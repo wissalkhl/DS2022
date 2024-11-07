@@ -21,6 +21,7 @@ SELECT * FROM nem2p_continents;
 SELECT COUNT(*) FROM nem2p_continents;
 SELECT * FROM nem2p_continents WHERE continent_id = 'AS';
 SELECT * FROM nem2p_continents WHERE id > 2 AND id < 4;
+SELECT * FROM customer LIMIT 10;
 ```
 
 INSERT
