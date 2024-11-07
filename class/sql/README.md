@@ -38,10 +38,13 @@ INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('OC', 'Ocean
 ### `UPDATE`
 ```
 UPDATE nem2p_continents SET continent_name = "Oceania and Beyond" WHERE continent_id = 'OC';
+UPDATE customer SET store_id = 1 WHERE store_id IS NULL;
+UPDATE customer SET store_id = 1 WHERE store_id = '';
 ```
 ### `DROP`
 ```
 DELETE FROM nem2p_continents WHERE continent_id = 'EU';
+DELETE FROM customer WHERE customer_id = '';
 ```
 
 ### `JOIN`
