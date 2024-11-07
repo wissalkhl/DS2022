@@ -8,10 +8,42 @@ Open a browser tab to https://demo.cloudbeaver.io/#/
 4. Select some rows from a table
 5. Limit the select with a WHERE clause, or a LIMIT.
 
+CREATE
+```
+create table nem2p_continents (
+	continent_id VARCHAR(5),
+	continent_name VARCHAR(30)
+);
+```
 SELECT
+```
+SELECT * FROM nem2p_continents;
+SELECT COUNT(*) FROM nem2p_continents;
+SELECT * FROM nem2p_continents WHERE continent_id = 'AS';
+SELECT * FROM nem2p_continents WHERE id > 2 AND id < 4;
+```
 
 INSERT
-
+```
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('NA', 'North America');
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('AS', 'Asia');
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('SA', 'South America');
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('AF', 'Africa');
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('EU', 'Europe');
+INSERT INTO nem2p_continents (continent_id, continent_name) VALUES ('OC', 'Oceania');
+```
 UPDATE
-
+```
+UPDATE nem2p_continents SET continent_name = "Oceania and Beyond" WHERE continent_id = 'OC';
+```
 DROP
+```
+DELETE FROM nem2p_continents WHERE continent_id = 'EU';
+```
+
+JOIN
+```
+SELECT nem2p.first_name, nem2p.last_name, nem2p_continents.continent_name
+FROM nem2p JOIN nem2p_continents 
+  WHERE nem2p.continent = nem2p_continents.continent_id;
+```
